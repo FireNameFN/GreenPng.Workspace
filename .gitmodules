@@ -1,6 +1,6 @@
-[submodule "GreenBuf"]
-	path = GreenBuf
-	url = https://github.com/FireNameFN/GreenBuf.git
 [submodule "GreenPng"]
 	path = GreenPng
 	url = https://github.com/FireNameFN/GreenPng.git
+[submodule "GreenBuf"]
+	path = GreenBuf
+	url = https://github.com/FireNameFN/GreenBuf.git
