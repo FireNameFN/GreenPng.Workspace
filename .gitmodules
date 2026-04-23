@@ -4,4 +4,3 @@
 [submodule "GreenPng"]
 	path = GreenPng
 	url = https://github.com/FireNameFN/GreenPng.git
-	branch = component
