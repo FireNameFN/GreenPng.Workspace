@@ -55,8 +55,11 @@ ok = PngDecoder.TryDecode(pngFileData, header, image);
 - War
 
 # Git Workspace
+
 This is **workspace** of Git Workspace paradigm.
+
 Main component: [GreenPng](github.com/FireNameFN/GreenPng)
+
 Components:
 
 - [GreenPng](github.com/FireNameFN/GreenPng)
