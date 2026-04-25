@@ -53,3 +53,11 @@ ok = PngDecoder.TryDecode(pngFileData, header, image);
 - 16 bit
 - Unusual chunks
 - War
+
+# Git Workspace
+This is **workspace** of Git Workspace paradigm.
+Main component: [GreenPng](github.com/FireNameFN/GreenPng)
+Components:
+
+- [GreenPng](github.com/FireNameFN/GreenPng)
+- [GreenBuf](https://github.com/FireNameFN/GreenBuf)
