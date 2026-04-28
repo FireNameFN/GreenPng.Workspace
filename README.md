@@ -26,9 +26,7 @@ It is focused on decoding 8-bit-per-channel images to little-endian `BGRA` forma
 
 ## How to use
 
-### Installing
-
-#### From NuGet
+### Installing from NuGet
 
 [![nuget](https://img.shields.io/nuget/v/GreenPng)](https://www.nuget.org/packages/GreenPng)
 
