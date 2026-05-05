@@ -25,4 +25,4 @@ jobs:
     - name: Pack
       run: dotnet pack GreenPng --no-build -p:IncludeReadme=true -o Packages
     - name: Publish
-      run: dotnet nuget push Packages/* --api-key {{ $NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push Packages/* --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
