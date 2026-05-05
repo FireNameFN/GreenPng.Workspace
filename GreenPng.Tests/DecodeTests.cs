@@ -13,6 +13,8 @@ public sealed class DecodeTests {
 
         byte[] imageRef = Decoders.DecodeStbImageSharpBgra(testImage.Png);
 
+        Assert.Fail("Test fail");
+
         await Assert.That(image.SequenceEqual(imageRef)).IsTrue();
     }
 
