@@ -23,6 +23,6 @@ jobs:
     - name: Test
       run: dotnet run --project GreenPng.Tests -c Release --no-build
     - name: Pack
-      run: dotnet pack GreenPng --no-build -p:IncludeReadme=true
+      run: dotnet pack GreenPng --no-build -p:IncludeReadme=true -o Packages
     - name: Publish
-      run: dotnet nuget push GreenPng --api-key {{ $NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push Packages/* --api-key {{ $NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
