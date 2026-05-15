@@ -22,8 +22,10 @@ jobs:
       run: dotnet restore GreenPng.Tests
     - name: Build
       run: dotnet build GreenPng.Tests -c Release --no-restore
-    - name: Test
-      run: dotnet run --project GreenPng.Tests -c Release --no-build
+    - name: Test net10.0
+      run: dotnet run --project GreenPng.Tests -c Release -f net10.0 --no-build
+    - name: Test net11.0
+      run: dotnet run --project GreenPng.Tests -c Release -f net11.0 --no-build
     - name: Pack
       run: dotnet pack GreenPng --no-build -p:IncludeReadme=true -o Packages
     - name: Publish
