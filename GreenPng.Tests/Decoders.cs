@@ -1,6 +1,4 @@
 using ImageMagick;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
 
 namespace GreenPng.Tests;
 
@@ -26,15 +24,5 @@ public static class Decoders {
 
     public static byte[] DecodeStbImageSharpRgba(byte[] png) {
         return StbImageSharp.ImageResult.FromMemory(png, StbImageSharp.ColorComponents.RedGreenBlueAlpha).Data;
-    }
-
-    public static byte[] DecodeImageSharp(byte[] png) {
-        using Image<Bgra32> sharp = Image.Load<Bgra32>(png);
-
-        byte[] image = new byte[sharp.Width * sharp.Height * 4];
-
-        sharp.CopyPixelDataTo(image);
-
-        return image;
     }
 }

@@ -15,14 +15,4 @@ public sealed class DecodeTests {
 
         await Assert.That(image.SequenceEqual(imageRef)).IsTrue();
     }
-
-    [Test]
-    [MethodDataSource(typeof(TestImageDataSource), nameof(TestImageDataSource.GetTestImages))]
-    public async Task EqualToImageSharp(TestImage testImage) {
-        byte[] image = Decoders.DecodeGreenPng(testImage.Png);
-
-        byte[] imageRef = Decoders.DecodeImageSharp(testImage.Png);
-
-        await Assert.That(image.SequenceEqual(imageRef)).IsTrue();
-    }
 }

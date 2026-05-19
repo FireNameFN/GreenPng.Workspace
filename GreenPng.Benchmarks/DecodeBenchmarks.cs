@@ -2,8 +2,6 @@ using System;
 using BenchmarkDotNet.Attributes;
 using GreenPng.Testing;
 using ImageMagick;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
 
 namespace GreenPng.Benchmarks;
 
@@ -44,27 +42,5 @@ public class DecodeBenchmarks {
         byte[] stbImage = StbImageSharp.ImageResult.FromMemory(TestImage.Png, StbImageSharp.ColorComponents.RedGreenBlueAlpha).Data;
 
         return stbImage;
-    }
-
-    [Benchmark]
-    public byte[] DecodeImageSharp() {
-        using Image<Bgra32> sharp = Image.Load<Bgra32>(TestImage.Png);
-
-        byte[] sharpImage = new byte[sharp.Width * sharp.Height * 4];
-
-        sharp.CopyPixelDataTo(sharpImage);
-
-        return sharpImage;
-    }
-
-    [Benchmark]
-    public byte DecodeImageSharpSpan() {
-        using Image<Bgra32> sharp = Image.Load<Bgra32>(TestImage.Png);
-
-        Span<byte> sharpImage = stackalloc byte[sharp.Width * sharp.Height * 4];
-
-        sharp.CopyPixelDataTo(sharpImage);
-
-        return sharpImage[^1];
     }
 }
