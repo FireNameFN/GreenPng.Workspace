@@ -6,7 +6,7 @@ It is focused on decoding 8-bit-per-channel images to little-endian `BGRA` forma
 
 ## Comparsion
 
-| Project | Speed | Memory efficiency | Free license |
+| Project | Speed | Memory Efficiency | Free License |
 |-|-|-|-|
 | **GreenPng** | :zap: | :green_circle: | :white_check_mark: |
 | StbImageSharp | :bulb: | :yellow_circle:| :white_check_mark: |
@@ -15,7 +15,7 @@ It is focused on decoding 8-bit-per-channel images to little-endian `BGRA` forma
 
 ## Format support
 
-| Type | 1, 2, 4 bit | 8 bit | 16 bit |
+| Type | 1, 2, 4 Bit | 8 Bit | 16 Bit |
 |-|-|-|-|
 | Greyscale | :white_check_mark: | :white_check_mark: | :x: |
 | Truecolor || :white_check_mark: | :x: |
